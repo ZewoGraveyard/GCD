@@ -8,7 +8,7 @@ Kalopsia
 [![Travis](https://img.shields.io/badge/Build-Passing-4BC51D.svg?style=flat)](https://travis-ci.org/Zewo/Kalopsia)
 [![codecov.io](http://codecov.io/github/Zewo/Kalopsia/coverage.svg?branch=master)](http://codecov.io/github/Zewo/Kalopsia?branch=master)
 
-**Kalopsia** is a Grand Central Dispatch library for **Swift 2**.
+**Kalopsia** is a Grand Central Dispatch wrapper for **Swift 2**.
 
 ## Features
 
