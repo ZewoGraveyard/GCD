@@ -23,6 +23,8 @@
 		B005119D1BEAC913001B3F26 /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00511951BEAC913001B3F26 /* Semaphore.swift */; };
 		B005119F1BEACDF3001B3F26 /* Kalopsia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005119E1BEACDF3001B3F26 /* Kalopsia.swift */; };
 		B00511A01BEACDF3001B3F26 /* Kalopsia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005119E1BEACDF3001B3F26 /* Kalopsia.swift */; };
+		B00511A21BEAEF16001B3F26 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00511A11BEAEF16001B3F26 /* QueueTests.swift */; };
+		B00511A31BEAEF16001B3F26 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00511A11BEAEF16001B3F26 /* QueueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +46,10 @@
 
 /* Begin PBXFileReference section */
 		B005109B1BE97B7B001B3F26 /* Kalopsia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kalopsia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B00510A51BE97B7B001B3F26 /* Kalopsia.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kalopsia.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510A51BE97B7B001B3F26 /* KalopsiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KalopsiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00510BE1BE97BB4001B3F26 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		B00510EA1BE9952D001B3F26 /* Kalopsia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kalopsia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B00510F31BE9952D001B3F26 /* Kalopsia.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kalopsia.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510F31BE9952D001B3F26 /* KalopsiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KalopsiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00511851BEAC6AF001B3F26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00511861BEAC6AF001B3F26 /* Kalopsia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kalopsia.h; sourceTree = "<group>"; };
 		B00511881BEAC6AF001B3F26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		B00511941BEAC913001B3F26 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		B00511951BEAC913001B3F26 /* Semaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
 		B005119E1BEACDF3001B3F26 /* Kalopsia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kalopsia.swift; sourceTree = "<group>"; };
+		B00511A11BEAEF16001B3F26 /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				B005109B1BE97B7B001B3F26 /* Kalopsia.framework */,
-				B00510A51BE97B7B001B3F26 /* Kalopsia.xctest */,
+				B00510A51BE97B7B001B3F26 /* KalopsiaTests.xctest */,
 				B00510EA1BE9952D001B3F26 /* Kalopsia.framework */,
-				B00510F31BE9952D001B3F26 /* Kalopsia.xctest */,
+				B00510F31BE9952D001B3F26 /* KalopsiaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B00511881BEAC6AF001B3F26 /* Info.plist */,
+				B00511A11BEAEF16001B3F26 /* QueueTests.swift */,
 			);
 			path = "Kalopsia Tests";
 			sourceTree = "<group>";
@@ -211,7 +215,7 @@
 			);
 			name = "Kalopsia OSX Tests";
 			productName = CurrentsTests;
-			productReference = B00510A51BE97B7B001B3F26 /* Kalopsia.xctest */;
+			productReference = B00510A51BE97B7B001B3F26 /* KalopsiaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B00510E91BE9952D001B3F26 /* Kalopsia iOS */ = {
@@ -247,7 +251,7 @@
 			);
 			name = "Kalopsia iOS Tests";
 			productName = "Currents iOSTests";
-			productReference = B00510F31BE9952D001B3F26 /* Kalopsia.xctest */;
+			productReference = B00510F31BE9952D001B3F26 /* KalopsiaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -342,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00511A21BEAEF16001B3F26 /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00511A31BEAEF16001B3F26 /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,22 +520,25 @@
 		B00510B31BE97B7B001B3F26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Kalopsia Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.KalopsiaOSXTests;
-				PRODUCT_NAME = Kalopsia;
+				PRODUCT_NAME = KalopsiaTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B00510B41BE97B7B001B3F26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Kalopsia Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.KalopsiaOSXTests;
-				PRODUCT_NAME = Kalopsia;
+				PRODUCT_NAME = KalopsiaTests;
 			};
 			name = Release;
 		};
@@ -584,25 +593,28 @@
 		B00510FF1BE9952D001B3F26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kalopsia Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.KalopsiaiOSTests;
-				PRODUCT_NAME = Kalopsia;
+				PRODUCT_NAME = KalopsiaTests;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B00511001BE9952D001B3F26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kalopsia Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.KalopsiaiOSTests;
-				PRODUCT_NAME = Kalopsia;
+				PRODUCT_NAME = KalopsiaTests;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
