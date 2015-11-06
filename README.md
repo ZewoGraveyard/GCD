@@ -12,7 +12,7 @@ Kalopsia
 
 ## Features
 
-- [x] No `Foundation` depency (**Linux ready**)
+- [x] No `Foundation` dependency (**Linux ready**)
 - [x] Queues
 - [x] Semaphore
 - [x] IO Channel
