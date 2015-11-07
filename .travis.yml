@@ -13,6 +13,7 @@ env:
     - DESTINATION="arch=x86_64" SCHEME="Kalopsia OSX" SDK=macosx10.11
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+#  - xcrun instruments -w "iPhone 6 (8.1 Simulator)" || echo "Launched"
 script:
   - set -o pipefail
   - xcodebuild -version
