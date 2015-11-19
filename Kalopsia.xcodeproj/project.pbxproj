@@ -291,8 +291,8 @@
 			projectRoot = "";
 			targets = (
 				B005109A1BE97B7B001B3F26 /* Kalopsia OSX */,
-				B00510A41BE97B7B001B3F26 /* Kalopsia OSX Tests */,
 				B00510E91BE9952D001B3F26 /* Kalopsia iOS */,
+				B00510A41BE97B7B001B3F26 /* Kalopsia OSX Tests */,
 				B00510F21BE9952D001B3F26 /* Kalopsia iOS Tests */,
 			);
 		};
@@ -553,7 +553,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Kalopsia/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.KalopsiaiOS;
 				PRODUCT_MODULE_NAME = Kalopsia;
@@ -577,7 +577,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Kalopsia/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.KalopsiaiOS;
 				PRODUCT_MODULE_NAME = Kalopsia;
