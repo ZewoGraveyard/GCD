@@ -60,21 +60,21 @@ public enum IOChannelResult {
     case Canceled(data: [Int8])
     case Failure(error: ErrorType)
 
-    func success(f: (done: Bool, data: [Int8]) -> Void) {
+    public func success(f: (done: Bool, data: [Int8]) -> Void) {
         switch self {
         case Success(let done, let data): f(done: done, data: data)
         default: break
         }
     }
 
-    func failure(f: ErrorType -> Void) {
+    public func failure(f: ErrorType -> Void) {
         switch self {
         case Failure(let e): f(e)
         default: break
         }
     }
 
-    func canceled(f: (data: [Int8]) -> Void) {
+    public func canceled(f: (data: [Int8]) -> Void) {
         switch self {
         case Canceled(let data): f(data: data)
         default: break
