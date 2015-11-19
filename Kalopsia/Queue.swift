@@ -34,31 +34,31 @@ public enum QualityOfServiceClass {
     private var value: qos_class_t {
         switch self {
         case UserInteractive:
-            if #available(OSX 10.10, iOS 8.0, *) {
+            if #available(OSX 10.10, *) {
                 return QOS_CLASS_USER_INTERACTIVE
             } else {
                 return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_HIGH))
             }
         case UserInitiated:
-            if #available(OSX 10.10, iOS 8.0, *) {
+            if #available(OSX 10.10, *) {
                 return QOS_CLASS_USER_INITIATED
             } else {
                 return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_HIGH))
             }
         case Default:
-            if #available(OSX 10.10, iOS 8.0, *) {
+            if #available(OSX 10.10, *) {
                 return QOS_CLASS_DEFAULT
             } else {
                 return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_DEFAULT))
             }
         case Utility:
-            if #available(OSX 10.10, iOS 8.0, *) {
+            if #available(OSX 10.10, *) {
                 return QOS_CLASS_UTILITY
             } else {
                 return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_LOW))
             }
         case Background:
-            if #available(OSX 10.10, iOS 8.0, *) {
+            if #available(OSX 10.10, *) {
                 return QOS_CLASS_BACKGROUND
             } else {
                 return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_BACKGROUND))
@@ -103,7 +103,7 @@ public struct Queue {
     }
 
     public init(label: String = "", type: QueueType = .Serial, qualityOfServiceClass qos: QualityOfServiceClass = .Default, relativePriority: Int32 = 0) {
-        if #available(OSX 10.10, iOS 8.0, *) {
+        if #available(OSX 10.10, *) {
             let attributes = dispatch_queue_attr_make_with_qos_class(type.value, qos.value, relativePriority)
             queue = dispatch_queue_create(label, attributes)
         } else {
