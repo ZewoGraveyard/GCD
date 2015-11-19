@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-               BuildableName = "Currents.framework"
+               BuildableName = "Kalopsia.framework"
                BlueprintName = "Kalopsia OSX"
                ReferencedContainer = "container:Kalopsia.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B00510A41BE97B7B001B3F26"
-               BuildableName = "Kalopsia.xctest"
+               BuildableName = "KalopsiaTests.xctest"
                BlueprintName = "Kalopsia OSX Tests"
                ReferencedContainer = "container:Kalopsia.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Currents.framework"
+            BuildableName = "Kalopsia.framework"
             BlueprintName = "Kalopsia OSX"
             ReferencedContainer = "container:Kalopsia.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Currents.framework"
+            BuildableName = "Kalopsia.framework"
             BlueprintName = "Kalopsia OSX"
             ReferencedContainer = "container:Kalopsia.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Currents.framework"
+            BuildableName = "Kalopsia.framework"
             BlueprintName = "Kalopsia OSX"
             ReferencedContainer = "container:Kalopsia.xcodeproj">
          </BuildableReference>

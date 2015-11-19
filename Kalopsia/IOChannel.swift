@@ -40,14 +40,14 @@ public enum IOChannelCleanUpResult {
     case Success
     case Failure(error: ErrorType)
 
-    func success(f: Void -> Void) {
+    public func success(f: Void -> Void) {
         switch self {
         case Success: f()
         default: break
         }
     }
 
-    func failure(f: ErrorType -> Void) {
+    public func failure(f: ErrorType -> Void) {
         switch self {
         case Failure(let e): f(e)
         default: break
