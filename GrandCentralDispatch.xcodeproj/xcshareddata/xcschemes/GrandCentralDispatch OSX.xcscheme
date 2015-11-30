@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B00510E91BE9952D001B3F26"
-               BuildableName = "Kalopsia.framework"
-               BlueprintName = "Kalopsia iOS"
-               ReferencedContainer = "container:Kalopsia.xcodeproj">
+               BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
+               BuildableName = "GrandCentralDispatch.framework"
+               BlueprintName = "GrandCentralDispatch OSX"
+               ReferencedContainer = "container:GrandCentralDispatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,20 +33,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B00510F21BE9952D001B3F26"
-               BuildableName = "KalopsiaTests.xctest"
-               BlueprintName = "Kalopsia iOS Tests"
-               ReferencedContainer = "container:Kalopsia.xcodeproj">
+               BlueprintIdentifier = "B00510A41BE97B7B001B3F26"
+               BuildableName = "GrandCentralDispatchTests.xctest"
+               BlueprintName = "GrandCentralDispatch OSX Tests"
+               ReferencedContainer = "container:GrandCentralDispatch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B00510E91BE9952D001B3F26"
-            BuildableName = "Kalopsia.framework"
-            BlueprintName = "Kalopsia iOS"
-            ReferencedContainer = "container:Kalopsia.xcodeproj">
+            BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
+            BuildableName = "GrandCentralDispatch.framework"
+            BlueprintName = "GrandCentralDispatch OSX"
+            ReferencedContainer = "container:GrandCentralDispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +65,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B00510E91BE9952D001B3F26"
-            BuildableName = "Kalopsia.framework"
-            BlueprintName = "Kalopsia iOS"
-            ReferencedContainer = "container:Kalopsia.xcodeproj">
+            BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
+            BuildableName = "GrandCentralDispatch.framework"
+            BlueprintName = "GrandCentralDispatch OSX"
+            ReferencedContainer = "container:GrandCentralDispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,10 +83,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B00510E91BE9952D001B3F26"
-            BuildableName = "Kalopsia.framework"
-            BlueprintName = "Kalopsia iOS"
-            ReferencedContainer = "container:Kalopsia.xcodeproj">
+            BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
+            BuildableName = "GrandCentralDispatch.framework"
+            BlueprintName = "GrandCentralDispatch OSX"
+            ReferencedContainer = "container:GrandCentralDispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -5,22 +5,22 @@ env:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   matrix:
-    - DESTINATION="OS=8.1,name=iPhone 4S" SCHEME="Kalopsia iOS" SDK=iphonesimulator9.1
-    - DESTINATION="OS=8.2,name=iPhone 5" SCHEME="Kalopsia iOS" SDK=iphonesimulator9.1
-    - DESTINATION="OS=8.3,name=iPhone 5S" SCHEME="Kalopsia iOS" SDK=iphonesimulator9.1
-    - DESTINATION="OS=8.4,name=iPhone 6" SCHEME="Kalopsia iOS" SDK=iphonesimulator9.1
-    - DESTINATION="OS=9.0,name=iPhone 6 Plus" SCHEME="Kalopsia iOS" SDK=iphonesimulator9.1
-    - DESTINATION="arch=x86_64" SCHEME="Kalopsia OSX" SDK=macosx10.11
+    - DESTINATION="OS=8.1,name=iPhone 4S" SCHEME="GrandCentralDispatch iOS" SDK=iphonesimulator9.1
+    - DESTINATION="OS=8.2,name=iPhone 5" SCHEME="GrandCentralDispatch iOS" SDK=iphonesimulator9.1
+    - DESTINATION="OS=8.3,name=iPhone 5S" SCHEME="GrandCentralDispatch iOS" SDK=iphonesimulator9.1
+    - DESTINATION="OS=8.4,name=iPhone 6" SCHEME="GrandCentralDispatch iOS" SDK=iphonesimulator9.1
+    - DESTINATION="OS=9.0,name=iPhone 6 Plus" SCHEME="GrandCentralDispatch iOS" SDK=iphonesimulator9.1
+    - DESTINATION="arch=x86_64" SCHEME="GrandCentralDispatch OSX" SDK=macosx10.11
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 #  - xcrun instruments -w "iPhone 6 (8.1 Simulator)" || echo "Launched"
 script:
   - set -o pipefail
   - xcodebuild -version
-  - xcodebuild -project Kalopsia.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION"
+  - xcodebuild -project GrandCentralDispatch.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION"
     -configuration Debug ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
     GCC_GENERATE_TEST_COVERAGE_FILES=YES test | xcpretty -c
-  - xcodebuild -project Kalopsia.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION"
+  - xcodebuild -project GrandCentralDispatch.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION"
     -configuration Release ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
     GCC_GENERATE_TEST_COVERAGE_FILES=YES test | xcpretty -c
 after_success:

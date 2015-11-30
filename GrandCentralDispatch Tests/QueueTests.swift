@@ -1,4 +1,4 @@
-// Kalopsia.swift
+// QueueTests.swift
 //
 // The MIT License (MIT)
 //
@@ -22,18 +22,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Belle
+import XCTest
+import GrandCentralDispatch
 
-func bufferFromData(data: dispatch_data_t?) -> [Int8] {
-    var dataBuffer: [Int8] = []
-
-    if let data = data {
-        var buffer: UnsafePointer<Void> = nil
-        var length: Int = 0
-        let _ = dispatch_data_create_map(data, &buffer, &length)
-        dataBuffer = [Int8](count: length, repeatedValue: 0)
-        memcpy(&dataBuffer, buffer, length)
+class GrandCentralDispatchTests: XCTestCase {
+    func test() {
+        var called = false
+        defaultQueue.async {
+            called = true
+        }
+        NSThread.sleepForTimeInterval(0.1)
+        XCTAssert(called)
     }
-
-    return dataBuffer
 }

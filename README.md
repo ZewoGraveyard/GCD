@@ -1,15 +1,15 @@
-Kalopsia
-========
+GrandCentralDispatch
+====================
 
 [![Swift 2.0](https://img.shields.io/badge/Swift-2.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms OS X | iOS](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
-[![Cocoapods Compatible](https://img.shields.io/badge/Cocoapods-Compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/Kalopsia)
+[![Cocoapods Compatible](https://img.shields.io/badge/Cocoapods-Compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/GrandCentralDispatch)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-Compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Travis](https://img.shields.io/badge/Build-Passing-4BC51D.svg?style=flat)](https://travis-ci.org/Zewo/Kalopsia)
-[![codecov.io](http://codecov.io/github/Zewo/Kalopsia/coverage.svg?branch=master)](http://codecov.io/github/Zewo/Kalopsia?branch=master)
+[![Travis](https://img.shields.io/badge/Build-Passing-4BC51D.svg?style=flat)](https://travis-ci.org/Zewo/GrandCentralDispatch)
+[![codecov.io](http://codecov.io/github/Zewo/GrandCentralDispatch/coverage.svg?branch=master)](http://codecov.io/github/Zewo/GrandCentralDispatch?branch=master)
 
-**Kalopsia** is a Grand Central Dispatch wrapper for **Swift 2**.
+**GrandCentralDispatch** is a Grand Central Dispatch wrapper for **Swift 2**.
 
 ## Features
 
@@ -28,16 +28,18 @@ Kalopsia
 $ gem install cocoapods
 ```
 
-> CocoaPods 0.39.0+ is required to build Kalopsia.
+> CocoaPods 0.39.0+ is required to build GrandCentralDispatch.
 
-To integrate **Kalopsia** into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate **GrandCentralDispatch** into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
+source 'https://github.com/Zewo/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-pod 'Kalopsia', '0.2'
+pod 'GrandCentralDispatch', '0.1'
 ```
+> Don't forget  `source 'https://github.com/Zewo/Specs.git'`. This is very important. It should always come before the official CocoaPods repo.
 
 Then, run the following command:
 
@@ -56,15 +58,15 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate **Kalopsia** into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate **GrandCentralDispatch** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Zewo/Kalopsia" == 0.2
+github "Zewo/GrandCentralDispatch" == 0.1
 ```
 
 ### Command Line Application
 
-To use **Kalopsia** in a command line application:
+To use **GrandCentralDispatch** in a command line application:
 
 - Install the [Swift Command Line Application](https://github.com/Zewo/Swift-Command-Line-Application-Template) Xcode template
 - Follow [Cocoa Pods](#cocoapods) or [Carthage](#carthage) instructions.
@@ -72,4 +74,4 @@ To use **Kalopsia** in a command line application:
 License
 -------
 
-**Kalopsia** is released under the MIT license. See LICENSE for details.
+**GrandCentralDispatch** is released under the MIT license. See LICENSE for details.

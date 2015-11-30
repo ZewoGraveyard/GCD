@@ -1,4 +1,4 @@
-// QueueTests.swift
+// GrandCentralDispatch.h
 //
 // The MIT License (MIT)
 //
@@ -21,17 +21,3 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-
-import XCTest
-import Kalopsia
-
-class HTTPRequestParserTests: XCTestCase {
-    func testInvalidMethod() {
-        var called = false
-        defaultQueue.async {
-            called = true
-        }
-        NSThread.sleepForTimeInterval(0.1)
-        XCTAssert(called)
-    }
-}
