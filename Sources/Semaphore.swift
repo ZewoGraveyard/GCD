@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Belle
+import Foundation
 
 public struct Semaphore {
     let semaphore: dispatch_semaphore_t

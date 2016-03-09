@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Belle
+import Foundation
 
 public enum QualityOfServiceClass {
     case UserInteractive
@@ -34,35 +34,15 @@ public enum QualityOfServiceClass {
     private var value: qos_class_t {
         switch self {
         case UserInteractive:
-            if #available(OSX 10.10, *) {
-                return QOS_CLASS_USER_INTERACTIVE
-            } else {
-                return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_HIGH))
-            }
+            return QOS_CLASS_USER_INTERACTIVE
         case UserInitiated:
-            if #available(OSX 10.10, *) {
-                return QOS_CLASS_USER_INITIATED
-            } else {
-                return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_HIGH))
-            }
+            return QOS_CLASS_USER_INITIATED
         case Default:
-            if #available(OSX 10.10, *) {
-                return QOS_CLASS_DEFAULT
-            } else {
-                return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_DEFAULT))
-            }
+            return QOS_CLASS_DEFAULT
         case Utility:
-            if #available(OSX 10.10, *) {
-                return QOS_CLASS_UTILITY
-            } else {
-                return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_LOW))
-            }
+            return QOS_CLASS_UTILITY
         case Background:
-            if #available(OSX 10.10, *) {
-                return QOS_CLASS_BACKGROUND
-            } else {
-                return qos_class_t(UInt32(DISPATCH_QUEUE_PRIORITY_BACKGROUND))
-            }
+            return QOS_CLASS_BACKGROUND
         }
     }
 }
@@ -103,12 +83,8 @@ public struct Queue {
     }
 
     public init(label: String = "", type: QueueType = .Serial, qualityOfServiceClass qos: QualityOfServiceClass = .Default, relativePriority: Int32 = 0) {
-        if #available(OSX 10.10, *) {
-            let attributes = dispatch_queue_attr_make_with_qos_class(type.value, qos.value, relativePriority)
-            queue = dispatch_queue_create(label, attributes)
-        } else {
-            queue = dispatch_queue_create(label, type.value)
-        }
+        let attributes = dispatch_queue_attr_make_with_qos_class(type.value, qos.value, relativePriority)
+        queue = dispatch_queue_create(label, attributes)
     }
 
     /**

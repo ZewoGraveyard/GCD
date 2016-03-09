@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Belle
+import Foundation
 
 public enum IOChannelType {
     case Stream
@@ -107,14 +107,16 @@ public struct IOChannel {
         dispatch_io_write(channel, offset, data, queue.queue, mappedHandler)
     }
 
-    private func mapHandler(handler: IOChannelResult -> Void)(done: Bool, data: dispatch_data_t!, errorNumber: Int32) {
-        if errorNumber == ECANCELED {
-            handler(.Canceled(data: bufferFromData(data)))
-        } else if errorNumber != 0 {
-            let error = DispatchError.fromErrorNumber(errorNumber)
-            handler(.Failure(error: error))
-        } else {
-            handler(.Success(done: done, data: bufferFromData(data)))
+    private func mapHandler(handler: IOChannelResult -> Void) -> (done: Bool, data: dispatch_data_t!, errorNumber: Int32) -> Void {
+        return { done, data, errorNumber in
+            if errorNumber == ECANCELED {
+                handler(.Canceled(data: bufferFromData(data)))
+            } else if errorNumber != 0 {
+                let error = DispatchError.fromErrorNumber(errorNumber)
+                handler(.Failure(error: error))
+            } else {
+                handler(.Success(done: done, data: bufferFromData(data)))
+            }
         }
     }
 

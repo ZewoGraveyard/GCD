@@ -1,4 +1,4 @@
-// GrandCentralDispatch.swift
+// DispatchError.swift
 //
 // The MIT License (MIT)
 //
@@ -22,18 +22,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Belle
+import Foundation
 
-func bufferFromData(data: dispatch_data_t?) -> [Int8] {
-    var dataBuffer: [Int8] = []
+public struct DispatchError : ErrorType, CustomStringConvertible {
+    public let description: String
 
-    if let data = data {
-        var buffer: UnsafePointer<Void> = nil
-        var length: Int = 0
-        let _ = dispatch_data_create_map(data, &buffer, &length)
-        dataBuffer = [Int8](count: length, repeatedValue: 0)
-        memcpy(&dataBuffer, buffer, length)
+    init(_ description: String) {
+        self.description = description
     }
 
-    return dataBuffer
+    static func fromErrorNumber(errorNumber: Int32) -> DispatchError {
+        return String.fromCString(strerror(errorNumber)).map(DispatchError.init)!
+    }
 }
