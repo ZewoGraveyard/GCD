@@ -38,7 +38,7 @@ public enum IOChannelType {
 
 public enum IOChannelCleanUpResult {
     case Success
-    case Failure(error: ErrorType)
+    case Failure(error: ErrorProtocol)
 
     public func success(f: Void -> Void) {
         switch self {
@@ -47,7 +47,7 @@ public enum IOChannelCleanUpResult {
         }
     }
 
-    public func failure(f: ErrorType -> Void) {
+    public func failure(f: ErrorProtocol -> Void) {
         switch self {
         case Failure(let e): f(e)
         default: break
@@ -58,7 +58,7 @@ public enum IOChannelCleanUpResult {
 public enum IOChannelResult {
     case Success(done: Bool, data: [Int8])
     case Canceled(data: [Int8])
-    case Failure(error: ErrorType)
+    case Failure(error: ErrorProtocol)
 
     public func success(f: (done: Bool, data: [Int8]) -> Void) {
         switch self {
@@ -67,7 +67,7 @@ public enum IOChannelResult {
         }
     }
 
-    public func failure(f: ErrorType -> Void) {
+    public func failure(f: ErrorProtocol -> Void) {
         switch self {
         case Failure(let e): f(e)
         default: break

@@ -24,7 +24,7 @@
 
 import Foundation
 
-public struct DispatchError : ErrorType, CustomStringConvertible {
+public struct DispatchError : ErrorProtocol, CustomStringConvertible {
     public let description: String
 
     init(_ description: String) {
@@ -32,6 +32,6 @@ public struct DispatchError : ErrorType, CustomStringConvertible {
     }
 
     static func fromErrorNumber(errorNumber: Int32) -> DispatchError {
-        return String.fromCString(strerror(errorNumber)).map(DispatchError.init)!
+        return String(validatingUTF8: strerror(errorNumber)).map(DispatchError.init)!
     }
 }

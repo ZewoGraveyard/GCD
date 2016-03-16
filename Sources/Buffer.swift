@@ -31,7 +31,7 @@ func bufferFromData(data: dispatch_data_t?) -> [Int8] {
         var buffer: UnsafePointer<Void> = nil
         var length: Int = 0
         let _ = dispatch_data_create_map(data, &buffer, &length)
-        dataBuffer = [Int8](count: length, repeatedValue: 0)
+        dataBuffer = [Int8](repeating: 0, count: length)
         memcpy(&dataBuffer, buffer, length)
     }
 
