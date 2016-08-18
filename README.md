@@ -1,4 +1,4 @@
-GCD
+[Deprecated] GCD
 ===
 
 [![Swift][swift-badge]][swift-url]
